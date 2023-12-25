@@ -25,13 +25,13 @@ class Queue {
 
   enqueue(value) {
     if (this.length === 0) {
-      this.head = new Node(value);
+      this.head = new ListNode(value);
     }  else {
       let cur = this.head;
       while (cur.next) {
         cur = cur.next
       }
-      cur.next = new Node(value);
+      cur.next = new ListNode(value);
     }
     this.length++
   }
